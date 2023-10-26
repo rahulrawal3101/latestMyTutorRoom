@@ -26,15 +26,15 @@ const OurExpertise = () => {
         { title: 'Group Tutoring',  icon: python, desc: 'Our group session provides team support and is very engaging.' },
         { title: '  k-12 Academic', icon: flutter, desc: 'Our Tutors are exceptionally skilled in all academic subjects.' },
         { title: 'College/University', icon: shopify, desc: 'Higher Education courses can be difficult. However, we make the journey easier.' },
-        { title: 'Professional Development Courses',  icon: reactjs, desc: 'We provide career and professional courses to help your growth.' },
+        { title: 'Prof Development Course ',  icon: reactjs, desc: 'We provide career and professional courses to help your growth.' },
         { title: 'Foreign Language',icon: laravel, desc: 'Our language Instructors find passion in sharing their knowledge.' },
         { title: 'Test/Exam Prep', icon: angular, desc: 'Our expert tutors are a click away. They can prepare you for your next exam.' },
         { title: 'Homework Help', icon: fullstack, desc: 'We know it can be difficult to understand a topic or subject. We can help you.' },
         ].map((item) => {
             return <div  onMouseDown={() => (setIsMouseDown(false))} onMouseOut={() => (setIsMouseDown(true))} key={item.title} className="card-container">
                 <div className="card">
-                    <h2><strong>{item.title.length>18?item.title.slice(0, 17) + '...':item.title}</strong></h2>
-                    <p>{item.desc}</p>
+                    <h3>{item.title}</h3>
+                    <p style={{marginTop:'30px'}}>{item.desc}</p>
                     <div className="layers">
                         <div className="layer"></div>
                         <div className="layer"></div>
