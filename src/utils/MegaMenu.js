@@ -85,6 +85,8 @@ const MegaMenu = ({ title = "GiveTitleName", data = [], navigateHandlerTitleRout
     const handleNavigatorScrollSec=(item)=>{
         if(item=="homework"){
             window.open("https://admin.mytutorroom.com/homework")
+        }else if(item == 'request'){
+            window.open('https://admin.mytutorroom.com/instructor-finder'); 
         }
         else{
             navigate(`${item}`)

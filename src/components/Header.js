@@ -57,7 +57,7 @@ export default function Header() {
                                 <MegaMenu title="About" navigateHandlerTitleRoute='/about' />
                                 <MegaMenu title="Services" data={servivessection}  navigateHandlerTitleRoute='/services' />
                                 <MegaMenu title="Homework Help" navigateHandlerTitleRoute="homework"/>
-                                <MegaMenu title="Job Openings" data={solutionsSection} />
+                                <MegaMenu title="Request a Tutor" navigateHandlerTitleRoute="request"/>
                                 
                                 <MegaMenu title="Contact" navigateHandlerTitleRoute='/contact' />
                             </Box>}

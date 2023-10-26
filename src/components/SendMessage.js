@@ -23,10 +23,10 @@ const  SendMessage = () => {
                     <Typography variant='h5' textAlign={'center'} sx={{ color: SECONDARY_COLOR, fontWeight: 'normal' }} data-aos="fade-right">Ready to speak with My Tutor Room? Call us now.</Typography>
                      <Box sx={{display:"flex"}}>
                      <a href={`tel:+91 ${MOBILE}`} style={{ textDecoration: 'none', }}>
-                        <Typography textAlign="center" sx={{fontSize:{lg:"28px",md:"25px",sm:"18px",xs:"15px"},mr:"20px", color: '#fff', fontWeight: 900 }} data-aos="fade-right">+233531437109,</Typography>
+                        <Typography textAlign="center" sx={{fontSize:{lg:"28px",md:"25px",sm:"18px",xs:"15px"},mr:"20px", color: '#fff', fontWeight: 900 }} data-aos="fade-right">{MOBILE2}</Typography>
                     </a>
                     <a href={`tel:+91 ${MOBILE2}`} style={{ textDecoration: 'none', }}>
-                        <Typography textAlign="center" sx={{fontSize:{lg:"28px",md:"25px",sm:"18px",xs:"15px"}, color: '#fff', fontWeight: 900 }} data-aos="fade-right">+12109861774</Typography>
+                        <Typography textAlign="center" sx={{fontSize:{lg:"28px",md:"25px",sm:"18px",xs:"15px"}, color: '#fff', fontWeight: 900 }} data-aos="fade-right">{MOBILE}</Typography>
                     </a>
                      </Box>
                     
