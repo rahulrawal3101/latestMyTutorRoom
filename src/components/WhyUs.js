@@ -40,7 +40,7 @@ const WhyUs = () => {
             <Grid container className='servicesSectionMiddle' sx={{ borderRadius: { xs: '20px', lg: '90px', sm: '90px', md: '90px' }, p: { xs: '10px', lg: '20px', md: '20px', sm: '20px' }, pl: { xs: '30px', lg: '45px' }, justifyContent: 'space-evenly', alignItems: 'center' }} >
                     {
                         services.map((item) => {
-                            return (<Grid item lg={5} md={5} sm={5} onClick={()=>{handleNavigatorAA(item.path)}} className='servicesBox'  key={item.title} sx={{ backgroundImage: `url(${item.icon})`,cursor:"pointer", display: 'flex', flexDirection: 'column', justifyContent:"space-between", p: '20px', borderRadius: '30px', m: '0px 20px 20px 0px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundColor:'rgb(120,120,120)', backgroundBlendMode:'multiply' }} data-aos={`${item.animate}`} >
+                            return (<Grid item lg={5} md={5} sm={5} onClick={()=>{handleNavigatorAA(item.path)}} className='servicesBox'  key={item.title} sx={{ backgroundImage: `url(${item.icon})`,cursor:"pointer", display: 'flex', flexDirection: 'column', justifyContent:"space-between", p: '20px', borderRadius: '30px', m: '0px 20px 20px 0px', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundColor:'rgb(150,150,150)', backgroundBlendMode:'multiply' }} data-aos={`${item.animate}`} >
                             <Box>
                                 <EastIcon sx={{color:"white",fontSize:{lg:"40px",md:"40px",sm:"30px",xs:"25px"},fontWeight:900}}/>
                             </Box>

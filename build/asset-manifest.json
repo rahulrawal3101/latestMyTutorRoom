@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c105503d.css",
-    "main.js": "/static/js/main.036c4d88.js",
+    "main.js": "/static/js/main.93492c1d.js",
     "static/media/vediotut.mp4": "/static/media/vediotut.1d3f20aaf26441fc2787.mp4",
     "static/media/hiring-modal-two.png": "/static/media/hiring-modal-two.18936b61fb51522f8c98.png",
     "static/media/acad1.jpeg": "/static/media/acad1.0d66b20124a3198658d9.jpeg",
@@ -74,10 +74,10 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.c105503d.css.map": "/static/css/main.c105503d.css.map",
-    "main.036c4d88.js.map": "/static/js/main.036c4d88.js.map"
+    "main.93492c1d.js.map": "/static/js/main.93492c1d.js.map"
   },
   "entrypoints": [
     "static/css/main.c105503d.css",
-    "static/js/main.036c4d88.js"
+    "static/js/main.93492c1d.js"
   ]
 }
