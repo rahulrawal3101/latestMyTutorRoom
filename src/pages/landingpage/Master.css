@@ -1,0 +1,8 @@
+.rotateIconHeroPage{
+    transition: animation 0.90s ease;
+    animation: ghoom 2s ease-out  infinite  forwards;
+}
+@keyframes ghoom{
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}

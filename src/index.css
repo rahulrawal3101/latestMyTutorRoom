@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.button {
+  background-color: #1c87c9;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+@keyframes glowing {
+  0% {
+    background-color: #2ba805;
+    box-shadow: 0 0 5px #2ba805;
+  }
+  50% {
+    background-color: #49e819;
+    box-shadow: 0 0 20px #49e819;
+  }
+  100% {
+    background-color: #2ba805;
+    box-shadow: 0 0 5px #2ba805;
+  }
+}
+.button {
+  animation: glowing 1300ms infinite;
+}
