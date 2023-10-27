@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import upArrow from '../src/assets/arrowup.png';
 import '../src/pages/Homepage.css';
 import './appjs.css';
-import { AVATAR_IMAGE, MOBILE } from './constant';
+import { AVATAR_IMAGE, MOBILE,  } from './constant';
 import './index.css';
 import About from "./pages/About";
 import ContactUs from "./pages/Contact";
