@@ -13,37 +13,51 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Footer = () => {
     const navigate = useNavigate()
-    const year= new Date().getFullYear()
+    const year = new Date().getFullYear()
 
-  
-    
+
+
+
     const companyArray = [{ title: 'Home', path: '/' }, { title: 'Service', path: '/services' }, { title: 'Contact', path: '/contact' }].map((item, index) => {
         return <Typography onClick={() => { navigate(`${item.path}`); window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }) }} key={index} sx={{
-             
+
             fontSize: '15px',
             fontWeight: "700", mt: "8px", cursor: 'pointer', borderBottom: '3px solid transparent', '&:hover': { opacity: 0.6, borderBottom: `3px solid ${HOVER_COLOR}` },
             transition: "all 0.30s ease",
         }}>{item.title}</Typography>
     })
 
-    const supportArray = [{ title: 'Help center', path: '/' }, { title: 'Terms of services', path: '/terms' }, { title: 'Privacy policy', path: '/privacy' }].map((item, index) => {
-        return <Typography onClick={() => { navigate(`${item.path}`); window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }) }} key={index} sx={{ transition: "all 0.30s ease", fontSize: '15px', fontWeight: "700", mt: "8px", borderBottom: '3px solid transparent', '&:hover': { opacity: 0.6, borderBottom: `3px solid ${HOVER_COLOR}`, cursor: 'pointer' } }}>{item.title}</Typography>
-    })
+    const supportArray = [{ title: 'Help center', path: '' }, { title: 'Terms of services', path: '/terms' }, { title: 'Privacy policy', path: '/privacy' }]
+  
 
-    const socialIcons = [{icon:<InstagramIcon color='primary'/>,id:1,link:"https://www.instagram.com/my_tutorroom/"}, {icon:<FacebookIcon color='primary'/>,id:2,link:"https://www.facebook.com/people/My-Tutor-Room/61551953380994/"}, {icon:<TwitterIcon color='primary'/>,id:3,link:"https://twitter.com/i/flow/login?redirect_after_login=%2FMy_tutorroom"}, {icon:<LinkedInIcon color='primary'/>,id:4,link:"https://www.linkedin.com/in/my-tutor-room-223626297/"},{icon:<YouTubeIcon color="primary"/>,id:5,link:"https://www.youtube.com/channel/UCgRGjxrgHQBsonyOYG_vECg"}].map((item, index) => {
+    const socialIcons = [{ icon: <InstagramIcon color='primary' />, id: 1, link: "https://www.instagram.com/my_tutorroom/" }, { icon: <FacebookIcon color='primary' />, id: 2, link: "https://www.facebook.com/people/My-Tutor-Room/61551953380994/" }, { icon: <TwitterIcon color='primary' />, id: 3, link: "https://twitter.com/i/flow/login?redirect_after_login=%2FMy_tutorroom" }, { icon: <LinkedInIcon color='primary' />, id: 4, link: "https://www.linkedin.com/in/my-tutor-room-223626297/" }, { icon: <YouTubeIcon color="primary" />, id: 5, link: "https://www.youtube.com/channel/UCgRGjxrgHQBsonyOYG_vECg" }].map((item, index) => {
         return <Typography key={index} sx={{ color: MAIN_COLOR, }}>
-            <a href={item.link} style={{textDecoration:"none"}}>{item.icon}</a>
+            <a href={item.link} style={{ textDecoration: "none" }}>{item.icon}</a>
         </Typography>
     })
 
-    const handleHomeNavigate =()=>{
+    const handleHomeNavigate = () => {
         navigate('/')
         window.scroll({
-            top:0,
-            behavior:"smooth"
+            top: 0,
+            behavior: "smooth"
         })
     }
-    
+
+    const changeHandler = (ele) => {
+        
+        if(ele.title == 'Help center'){
+            window.open('https://admin.mytutorroom.com/contact')
+        }else{
+            navigate(ele.path);
+            window.scrollTo({
+                top:0,
+                behavior:'smooth'
+            })
+        }
+     
+    }
+
     return (
         <>
             <Divider sx={{ border: `5px solid ${MAIN_COLOR}`, mb: '20px' }} />
@@ -59,7 +73,15 @@ const Footer = () => {
                 <Grid item xs={6} sm={6} md={6} lg={2} sx={{ display: "flex", justifyContent: "center" }}>
                     <Box sx={{ display: "flex", justifyContent: "flex-start", flexDirection: "column" }}>
                         <Typography variant='h1' className='Box1' sx={{ color: MAIN_COLOR, fontWeight: "900", fontSize: "24px", mb: "10px" }}>Support</Typography>
-                        {supportArray}
+                        {/* {supportArray } */}
+                        {
+                            supportArray.map((ele, index) => {
+                                return (
+                                    <Typography onClick={()=>{changeHandler(ele)}} key={index} sx={{ transition: "all 0.30s ease", fontSize: '15px', fontWeight: "700", mt: "8px", borderBottom: '3px solid transparent', '&:hover': { opacity: 0.6, borderBottom: `3px solid ${HOVER_COLOR}`, cursor: 'pointer' } }}>{ele.title}</Typography>
+
+                                )
+                            })
+                        }
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={4} sx={{ display: "flex", justifyContent: "center" }}>
@@ -78,7 +100,7 @@ const Footer = () => {
                 <Grid item xs={12} sm={12} md={6} lg={4} sx={{ display: "flex", justifyContent: "center", alignItems: 'center', flexDirection: 'column' }}>
                     <Box sx={{ width: "80%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                         <Box sx={{ width: "100%", display: 'flex', justifyContent: 'center' }} >
-                            <img src={adel} height="60px" width="65%" style={{ marginLeft: "-32px",cursor:"pointer" }} alt='pic' onClick={handleHomeNavigate}/>
+                            <img src={adel} height="60px" width="65%" style={{ marginLeft: "-32px", cursor: "pointer" }} alt='pic' onClick={handleHomeNavigate} />
                         </Box>
                         <Box sx={{ display: "flex", mt: "40px", justifyContent: "space-between", width: "70%", alignItems: 'center' }}>
                             {socialIcons}
